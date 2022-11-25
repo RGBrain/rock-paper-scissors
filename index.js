@@ -14,7 +14,7 @@ for (var i = 0; i < 10; i++) {
 
     // Get user choice
     var validChoice = false;
-    var userChoice = prompt("rock, paper or scissors?");
+    var userChoice = prompt("Rock, Paper or Scissors?");
     userChoice = userChoice.toLowerCase();
     
     // Announce choices...
@@ -26,7 +26,6 @@ for (var i = 0; i < 10; i++) {
     else {
         alert("You didn't enter a valid input.  The computer chose " + computerChoice + ", but it's pretty academic at this point.  You still have " + (10-i) + " chances.  Have another try...");
     }
-
 
     // Check for a draw
     if (userChoice === computerChoice) {
