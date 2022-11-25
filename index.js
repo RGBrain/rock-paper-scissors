@@ -87,18 +87,7 @@ for (var i = 0; i < 10; i++) {
 
         var winRate = (userWins / (i+1)) * 100;
         console.log("Games played: " + (i+1) + ".  wins: " + userWins + ".  You have won " + winRate.toFixed(2) + "% of your games.");
-
-
-    //   console.log("The value of userChoice is " + userChoice);
-    //   console.log("The value of computerChoice is " + computerChoice);
-    //   console.log("Played: " + i);
-    //   console.log("Won: : " + userWins);
-    //   console.log("Lost: " + userLosses);
-
 }
 
 alert("Games played: " + (i) + ".  wins: " + userWins + ".  loses: " + userLosses + ". Ties: " + ties + ".  You won " + winRate.toFixed(2) + "% of your games.");
-if (((i) / (userWins + userLosses + ties)) % 10 != 1) {
-    alert(i)
-    alert("...oh, and work on that spelling ;)")
-}
+
