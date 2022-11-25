@@ -1,4 +1,4 @@
-// Rock Paper Scissors Game
+// Rock, Paper, Scissors Game
 
 // Initialise game counters
 var userWins = 0;
@@ -35,7 +35,7 @@ for (var i = 0; i < 10; i++) {
     }
     // ...or alert for invalid input 
     else {
-        alert("You didn't enter a valid input.  The computer chose " + computerChoice + ", but it's pretty academic at this point.  You still have " + (10-i) + " chances.  Have another try...");
+        alert("You didn't enter a valid input.  The computer chose " + computerChoice + ", but it's pretty academic at this point.  You still have " + (9-i) + " chances.  Have another try...");
     }
 
     // Check for a draw
@@ -85,9 +85,24 @@ for (var i = 0; i < 10; i++) {
             }
     }
 
-        var winRate = (userWins / (i+1)) * 100;
-        console.log("Games played: " + (i+1) + ".  wins: " + userWins + ".  You have won " + winRate.toFixed(2) + "% of your games.");
+    // After 10 rounds, show stats on alert 
+    var winRate = (userWins / (i+1)) * 100;
+    console.log("Games played: " + (i+1) + ".  wins: " + userWins + ".  You have won " + winRate.toFixed(2) + "% of your games.");
 }
 
-alert("Games played: " + (i) + ".  wins: " + userWins + ".  loses: " + userLosses + ". Ties: " + ties + ".  You won " + winRate.toFixed(2) + "% of your games.");
+// Some conditional end messages 
+var userWinsMsg = (winRate.toFixed(0) + "%");
+if (userWins === 0) {
+    userWinsMsg = "none";
+}
 
+alert("Games played: " + (i) + ".  wins: " + userWins + ".  loses: " + userLosses + ". Ties: " + ties + ".  You won " + userWinsMsg + " of your games.");
+if (userWins > 5) {
+    alert("You did really well - you won " + userWins + "rounds!")
+}
+else if (userLosses > 5) {
+    alert(userLosses + " losses!  Oh dear!")
+}
+else if ((userWins + userLosses + ties) < 5) {
+    alert("Most of your choices were invalid in this game.  Why not try again, you can just type 'r', 'p', or 's' if you like...")
+}
