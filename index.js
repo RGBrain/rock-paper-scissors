@@ -98,7 +98,7 @@ if (userWins === 0) {
 
 alert("Games played: " + (i) + ".  wins: " + userWins + ".  loses: " + userLosses + ". Ties: " + ties + ".  You won " + userWinsMsg + " of your games.");
 if (userWins > 5) {
-    alert("You did really well - you won " + userWins + "rounds!")
+    alert("You did really well - you won " + userWins + " rounds!")
 }
 else if (userLosses > 5) {
     alert(userLosses + " losses!  Oh dear!")
